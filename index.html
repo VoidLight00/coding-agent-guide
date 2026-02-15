@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 코딩 에이전트 설치 가이드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <h1>AI 코딩 에이전트 설치 가이드</h1>
+    <p class="lead">Claude Code, Codex, Antigravity — Mac &amp; Windows 설치 방법</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- 사전 준비 -->
+  <section class="section" id="prerequisites">
+    <div class="section-header">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <h2>사전 준비</h2>
+    </div>
+
+    <div class="prereq-grid">
+      <div class="card">
+        <h3>Node.js 22+ 설치</h3>
+        <p>Claude Code와 Codex는 Node.js 22 이상이 필요합니다.</p>
+        <div class="tab-group" data-tabs="node">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="node-mac">Mac</button>
+            <button class="tab-btn" data-tab="node-win">Windows</button>
+          </div>
+          <div class="tab-content active" id="node-mac">
+            <div class="code-block">
+              <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+              <pre><code>brew install node@22</code></pre>
+            </div>
+            <p class="hint">또는 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>에서 .pkg 다운로드</p>
+          </div>
+          <div class="tab-content" id="node-win">
+            <div class="code-block">
+              <div class="code-header"><span>PowerShell (관리자)</span><button class="copy-btn" aria-label="복사">복사</button></div>
+              <pre><code>winget install OpenJS.NodeJS.LTS</code></pre>
+            </div>
+            <p class="hint">또는 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>에서 .msi 다운로드</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>터미널 열기</h3>
+        <p>설치 명령어를 입력할 터미널을 엽니다.</p>
+        <div class="tab-group" data-tabs="terminal">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="terminal-mac">Mac</button>
+            <button class="tab-btn" data-tab="terminal-win">Windows</button>
+          </div>
+          <div class="tab-content active" id="terminal-mac">
+            <div class="step-list">
+              <div class="step"><span class="step-num">1</span><span>Cmd + Space 로 Spotlight 열기</span></div>
+              <div class="step"><span class="step-num">2</span><span>"터미널" 입력 후 Enter</span></div>
+            </div>
+          </div>
+          <div class="tab-content" id="terminal-win">
+            <div class="step-list">
+              <div class="step"><span class="step-num">1</span><span>시작 버튼 우클릭</span></div>
+              <div class="step"><span class="step-num">2</span><span>"Windows PowerShell (관리자)" 선택</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Claude Code -->
+  <section class="section" id="claude-code">
+    <div class="section-header">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <h2>Claude Code</h2>
+      <span class="badge badge-provider">Anthropic</span>
+    </div>
+
+    <div class="card">
+      <div class="tab-group" data-tabs="claude">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="claude-mac">Mac</button>
+          <button class="tab-btn" data-tab="claude-win">Windows</button>
+        </div>
+        <div class="tab-content active" id="claude-mac">
+          <div class="step-list">
+            <div class="step"><span class="step-num">1</span><span>Node.js 22+ 설치 확인</span></div>
+            <div class="step"><span class="step-num">2</span><span>터미널에서 설치:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">3</span><span>실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>claude</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">4</span><span>첫 실행 시 브라우저가 열리며 Anthropic 계정 로그인</span></div>
+          </div>
+        </div>
+        <div class="tab-content" id="claude-win">
+          <div class="step-list">
+            <div class="step"><span class="step-num">1</span><span>Node.js 22+ 설치 확인</span></div>
+            <div class="step"><span class="step-num">2</span><span>PowerShell (관리자) 열기</span></div>
+            <div class="step"><span class="step-num">3</span><span>설치:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell (관리자)</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">4</span><span>실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>claude</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">5</span><span>첫 실행 시 Anthropic 계정 로그인</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <span class="info-label">필요 구독</span>
+          <span class="info-value">Claude Max ($100/월) 또는 API 키 (사용량 과금)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">공식 문서</span>
+          <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">docs.anthropic.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Codex -->
+  <section class="section" id="codex">
+    <div class="section-header">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <h2>Codex</h2>
+      <span class="badge badge-provider">OpenAI</span>
+    </div>
+
+    <div class="card">
+      <div class="tab-group" data-tabs="codex">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="codex-mac">Mac</button>
+          <button class="tab-btn" data-tab="codex-win">Windows</button>
+        </div>
+        <div class="tab-content active" id="codex-mac">
+          <div class="step-list">
+            <div class="step"><span class="step-num">1</span><span>Node.js 22+ 설치 확인</span></div>
+            <div class="step"><span class="step-num">2</span><span>터미널에서 설치:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>npm install -g @openai/codex</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">3</span><span>실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>codex</code></pre>
+          </div>
+          <div class="alert alert-tip">
+            <p><strong>Tip:</strong> 자동 승인 모드로 실행하려면 <code>codex --approval-mode full-auto</code></p>
+          </div>
+        </div>
+        <div class="tab-content" id="codex-win">
+          <div class="step-list">
+            <div class="step"><span class="step-num">1</span><span>Node.js 22+ 설치 확인</span></div>
+            <div class="step"><span class="step-num">2</span><span>PowerShell (관리자) 열기</span></div>
+            <div class="step"><span class="step-num">3</span><span>설치:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell (관리자)</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>npm install -g @openai/codex</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">4</span><span>실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>codex</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <span class="info-label">필요 구독</span>
+          <span class="info-value">ChatGPT Pro ($200/월) 또는 OpenAI API 키</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">공식 문서</span>
+          <a href="https://github.com/openai/codex" target="_blank" rel="noopener">github.com/openai/codex</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Antigravity -->
+  <section class="section" id="antigravity">
+    <div class="section-header">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <h2>Antigravity</h2>
+      <span class="badge badge-provider">Antigravity</span>
+    </div>
+
+    <div class="card">
+      <div class="tab-group" data-tabs="ag">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="ag-mac">Mac</button>
+          <button class="tab-btn" data-tab="ag-win">Windows</button>
+        </div>
+        <div class="tab-content active" id="ag-mac">
+          <div class="step-list">
+            <div class="step"><span class="step-num">1</span><span>설치 스크립트 실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>curl -fsSL https://antigravity.dev/install.sh | bash</code></pre>
+          </div>
+          <p class="hint" style="margin-top:0.5rem">또는 Node.js가 있다면:</p>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>npx antigravity@latest</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">2</span><span>실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>ag</code></pre>
+          </div>
+          <p class="hint">또는 <code>antigravity</code> 명령어도 사용 가능</p>
+        </div>
+        <div class="tab-content" id="ag-win">
+          <div class="step-list">
+            <div class="step"><span class="step-num">1</span><span>PowerShell (관리자) 에서 설치:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell (관리자)</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>irm https://antigravity.dev/install.ps1 | iex</code></pre>
+          </div>
+          <p class="hint" style="margin-top:0.5rem">또는 Node.js가 있다면:</p>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>npx antigravity@latest</code></pre>
+          </div>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">2</span><span>실행:</span></div>
+          </div>
+          <div class="code-block">
+            <div class="code-header"><span>PowerShell</span><button class="copy-btn" aria-label="복사">복사</button></div>
+            <pre><code>ag</code></pre>
+          </div>
+          <p class="hint">또는 <code>antigravity</code> 명령어도 사용 가능</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <span class="info-label">필요 구독</span>
+          <span class="info-value">Antigravity 계정 (별도 가입)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">공식 사이트</span>
+          <a href="https://antigravity.dev" target="_blank" rel="noopener">antigravity.dev</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 비교 표 -->
+  <section class="section" id="comparison">
+    <div class="section-header">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      <h2>비교</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Claude Code</th>
+            <th>Codex</th>
+            <th>Antigravity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">제공사</td>
+            <td>Anthropic</td>
+            <td>OpenAI</td>
+            <td>Antigravity</td>
+          </tr>
+          <tr>
+            <td class="row-label">필요 구독</td>
+            <td>Claude Max $100/월</td>
+            <td>ChatGPT Pro $200/월</td>
+            <td>별도 가입</td>
+          </tr>
+          <tr>
+            <td class="row-label">Mac</td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+          </tr>
+          <tr>
+            <td class="row-label">Windows</td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+          </tr>
+          <tr>
+            <td class="row-label">AI 모델</td>
+            <td>Claude 4</td>
+            <td>GPT-4.1 / o3</td>
+            <td>Claude (기반)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="cta-card">
+      <p>설치 후 OpenClaw을 설치하고 싶다면?</p>
+      <a href="https://openclaw-error-guide.vercel.app" target="_blank" rel="noopener" class="cta-link">
+        OpenClaw 설치 가이드 바로가기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">AI 코딩 에이전트 설치 가이드</p>
+  </footer>
+
+</main>
+
+<button class="back-to-top" id="backToTop" aria-label="맨 위로">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
