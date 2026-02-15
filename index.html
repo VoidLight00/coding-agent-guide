@@ -136,7 +136,7 @@
       <div class="info-row">
         <div class="info-item">
           <span class="info-label">필요 구독</span>
-          <span class="info-value">Claude Max ($100/월) 또는 API 키 (사용량 과금)</span>
+          <span class="info-value">Claude Pro ($20/월) 이상 또는 API 키 (사용량 과금). Max ($100~200/월) 권장</span>
         </div>
         <div class="info-item">
           <span class="info-label">공식 문서</span>
@@ -203,7 +203,7 @@
       <div class="info-row">
         <div class="info-item">
           <span class="info-label">필요 구독</span>
-          <span class="info-value">ChatGPT Pro ($200/월) 또는 OpenAI API 키</span>
+          <span class="info-value">ChatGPT Plus ($20/월) 이상 또는 OpenAI API 키</span>
         </div>
         <div class="info-item">
           <span class="info-label">공식 문서</span>
@@ -218,8 +218,10 @@
     <div class="section-header">
       <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       <h2>Antigravity</h2>
-      <span class="badge badge-provider">Antigravity</span>
+      <span class="badge badge-provider">Google</span>
     </div>
+
+    <p class="hint" style="margin-bottom:1rem;color:var(--text-secondary);">Google이 만든 AI 에이전트 IDE (VS Code 기반). 프리뷰 기간 중 <strong>무료</strong>. Gemini 3 Pro 모델 기본 탑재.</p>
 
     <div class="card">
       <div class="tab-group" data-tabs="ag">
@@ -229,58 +231,50 @@
         </div>
         <div class="tab-content active" id="ag-mac">
           <div class="step-list">
-            <div class="step"><span class="step-num">1</span><span>설치 스크립트 실행:</span></div>
+            <div class="step"><span class="step-num">1</span><span>공식 사이트에서 다운로드:</span></div>
           </div>
-          <div class="code-block">
-            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
-            <pre><code>curl -fsSL https://antigravity.dev/install.sh | bash</code></pre>
-          </div>
-          <p class="hint" style="margin-top:0.5rem">또는 Node.js가 있다면:</p>
-          <div class="code-block">
-            <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
-            <pre><code>npx antigravity@latest</code></pre>
-          </div>
+          <p class="hint"><a href="https://antigravity.google" target="_blank" rel="noopener" style="color:var(--accent);">antigravity.google</a> 접속 → Mac용 (.dmg) 다운로드 → 설치</p>
           <div class="step-list" style="margin-top: 0.75rem">
             <div class="step"><span class="step-num">2</span><span>실행:</span></div>
           </div>
+          <p class="hint">Applications에서 Antigravity 실행 → Google 계정 로그인</p>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">3</span><span>(선택) CLI에서도 실행 가능:</span></div>
+          </div>
           <div class="code-block">
             <div class="code-header"><span>Terminal</span><button class="copy-btn" aria-label="복사">복사</button></div>
-            <pre><code>ag</code></pre>
+            <pre><code>antigravity</code></pre>
           </div>
-          <p class="hint">또는 <code>antigravity</code> 명령어도 사용 가능</p>
+          <p class="hint">Command Palette (Cmd+Shift+P) → "Shell Command: Install" 먼저 실행</p>
         </div>
         <div class="tab-content" id="ag-win">
           <div class="step-list">
-            <div class="step"><span class="step-num">1</span><span>PowerShell (관리자) 에서 설치:</span></div>
+            <div class="step"><span class="step-num">1</span><span>공식 사이트에서 다운로드:</span></div>
           </div>
-          <div class="code-block">
-            <div class="code-header"><span>PowerShell (관리자)</span><button class="copy-btn" aria-label="복사">복사</button></div>
-            <pre><code>irm https://antigravity.dev/install.ps1 | iex</code></pre>
-          </div>
-          <p class="hint" style="margin-top:0.5rem">또는 Node.js가 있다면:</p>
-          <div class="code-block">
-            <div class="code-header"><span>PowerShell</span><button class="copy-btn" aria-label="복사">복사</button></div>
-            <pre><code>npx antigravity@latest</code></pre>
-          </div>
+          <p class="hint"><a href="https://antigravity.google" target="_blank" rel="noopener" style="color:var(--accent);">antigravity.google</a> 접속 → Windows용 (.exe) 다운로드 → 설치</p>
           <div class="step-list" style="margin-top: 0.75rem">
             <div class="step"><span class="step-num">2</span><span>실행:</span></div>
           </div>
+          <p class="hint">시작 메뉴에서 Antigravity 검색 → 실행 → Google 계정 로그인</p>
+          <div class="step-list" style="margin-top: 0.75rem">
+            <div class="step"><span class="step-num">3</span><span>(선택) CLI에서도 실행 가능:</span></div>
+          </div>
           <div class="code-block">
             <div class="code-header"><span>PowerShell</span><button class="copy-btn" aria-label="복사">복사</button></div>
-            <pre><code>ag</code></pre>
+            <pre><code>antigravity</code></pre>
           </div>
-          <p class="hint">또는 <code>antigravity</code> 명령어도 사용 가능</p>
+          <p class="hint">설치 시 PATH에 자동 추가됨</p>
         </div>
       </div>
 
       <div class="info-row">
         <div class="info-item">
           <span class="info-label">필요 구독</span>
-          <span class="info-value">Antigravity 계정 (별도 가입)</span>
+          <span class="info-value">무료 (프리뷰), Google 계정만 필요</span>
         </div>
         <div class="info-item">
           <span class="info-label">공식 사이트</span>
-          <a href="https://antigravity.dev" target="_blank" rel="noopener">antigravity.dev</a>
+          <a href="https://antigravity.google" target="_blank" rel="noopener">antigravity.google</a>
         </div>
       </div>
     </div>
@@ -308,13 +302,19 @@
             <td class="row-label">제공사</td>
             <td>Anthropic</td>
             <td>OpenAI</td>
-            <td>Antigravity</td>
+            <td>Google</td>
+          </tr>
+          <tr>
+            <td class="row-label">설치 방식</td>
+            <td>npm (CLI)</td>
+            <td>npm (CLI)</td>
+            <td>데스크톱 앱 (IDE)</td>
           </tr>
           <tr>
             <td class="row-label">필요 구독</td>
-            <td>Claude Max $100/월</td>
-            <td>ChatGPT Pro $200/월</td>
-            <td>별도 가입</td>
+            <td>Max $100/월 또는 API 키</td>
+            <td>Plus $20/월 이상</td>
+            <td>무료 (프리뷰)</td>
           </tr>
           <tr>
             <td class="row-label">Mac</td>
@@ -329,10 +329,22 @@
             <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
           </tr>
           <tr>
+            <td class="row-label">Linux</td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+          </tr>
+          <tr>
             <td class="row-label">AI 모델</td>
-            <td>Claude 4</td>
-            <td>GPT-4.1 / o3</td>
-            <td>Claude (기반)</td>
+            <td>Claude Sonnet 4.5 / Opus 4.5</td>
+            <td>GPT-5.3 Codex / o3</td>
+            <td>Gemini 3 Pro / Flash</td>
+          </tr>
+          <tr>
+            <td class="row-label">Node.js 필요</td>
+            <td>22+</td>
+            <td>22+</td>
+            <td>불필요</td>
           </tr>
         </tbody>
       </table>
